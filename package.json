@@ -1,0 +1,20 @@
+{
+  "name": "my-pnpm-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:web": "npx pnpm --filter web dev",
+    "dev:api": "npx pnpm --filter api start:dev",
+    "dev": "npx pnpm --parallel --filter web --filter api dev",
+    "build:web": "npx pnpm --filter web build",
+    "build:api": "npx pnpm --filter api build",
+    "build": "npx pnpm --filter ./apps/* build",
+    "lint:web": "npx pnpm --filter web lint",
+    "lint:api": "npx pnpm --filter api lint",
+    "test:api": "npx pnpm --filter api test",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f"
+  },
+  "devDependencies": {}
+}
