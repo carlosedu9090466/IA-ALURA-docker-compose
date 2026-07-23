@@ -65,6 +65,26 @@ Esta opção não exige que você tenha o Node.js ou PNPM instalados na máquina
    docker compose down
    ```
 
+> 💡 **Dica Importante**: Sempre que instalar uma **nova dependência** no workspace ou em qualquer aplicação (`package.json`), você deve rodar o comando `npm run docker:up` (ou `docker compose up --build`) para reconstruir a imagem do container e aplicar os novos pacotes.
+
+---
+
+## 🗺️ Rotas da Aplicação
+
+> 📌 *Nota: Sempre que uma nova rota for criada no projeto, ela deve ser registrada nesta seção.*
+
+### Frontend (`apps/web` - Porta 3000)
+
+| Rota | Descrição | Componente Principal |
+| :--- | :--- | :--- |
+| `/` | Página de Login | `LoginPage` (`src/pages/LoginPage/LoginPage.tsx`) |
+
+### Backend API (`apps/api` - Porta 3001)
+
+| Endpoint | Verbo | Descrição |
+| :--- | :--- | :--- |
+| `http://localhost:3001` | GET / POST / ... | Endpoints REST da API NestJS |
+
 ---
 
 ### Opção 2: Execução Local no Sistema Hospedeiro

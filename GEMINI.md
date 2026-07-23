@@ -169,3 +169,13 @@ Em **ambos os projetos** (`web` e `api`), as mensagens de commit devem seguir ri
 - **Estágios**:
   - `dev`: Monta volumes locais com hot-reload ativo.
   - `prod`: Servidor Nginx estático para o React e build Node.js otimizado para o NestJS.
+- **Hot Reload no Docker (Windows)**: O Vite deve conter `server.watch.usePolling: true` no `vite.config.ts` e o `docker-compose.yml` deve manter a variável `CHOKIDAR_USEPOLLING=true` para garantir que alterações nos arquivos no sistema hospedeiro (Windows) recarreguem instantaneamente o navegador sem precisar reiniciar o container.
+- **Instalação de Novas Dependências**: Sempre que uma nova dependência for instalada no workspace ou em qualquer pacote (`package.json`), oriente o usuário ou execute `npm run docker:up` (`docker compose up --build`) para recriar as imagens do Docker.
+
+### 6. Documentação & Mapeamento de Rotas (`README.md`)
+- **Novas Rotas**: Toda nova rota criada na aplicação (`web` ou `api`) DEVE obrigatoriamente ser adicionada e documentada na seção `## 🗺️ Rotas da Aplicação` do [README.md](file:///d:/Anota%C3%A7%C3%B5es%20-%20Carlos/CURSO%20IA/README.md).
+
+### 7. Planos de Implementação (`plans/`)
+- **Armazenamento de Planos**: Todo plano de implementação gerado no projeto DEVE obrigatoriamente ser salvo no diretório `plans/` localizado na raiz do repositório (ex: `plans/<nome_da_feature>.md`).
+
+
