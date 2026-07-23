@@ -18,7 +18,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
             className="sr-only peer"
             {...props}
           />
-          <div className="w-4 h-4 rounded border border-gray-400 peer-checked:bg-[#81FE88] peer-checked:border-[#81FE88] peer-focus:ring-2 peer-focus:ring-[#81FE88]/50 flex items-center justify-center transition-colors bg-transparent">
+          <div className="w-4 h-4 rounded border border-gray-400 peer-checked:bg-brand-green peer-checked:border-brand-green peer-focus:ring-2 peer-focus:ring-brand-green/50 flex items-center justify-center transition-colors bg-transparent">
             <svg
               className="w-3 h-3 text-black opacity-0 peer-checked:opacity-100 transition-opacity font-bold"
               fill="none"

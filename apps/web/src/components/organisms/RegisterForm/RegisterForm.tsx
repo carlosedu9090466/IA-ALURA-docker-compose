@@ -102,7 +102,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({
           type="submit"
           variant="primary"
           fullWidth
-          className="mt-6 shadow-lg hover:shadow-[#81FE88]/20"
+          className="mt-6 shadow-lg hover:shadow-brand-green/20"
           icon={
             <svg
               className="w-4 h-4 ml-1"

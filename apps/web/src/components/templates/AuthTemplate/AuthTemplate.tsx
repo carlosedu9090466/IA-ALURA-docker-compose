@@ -8,7 +8,7 @@ export interface AuthTemplateProps {
 
 export const AuthTemplate: React.FC<AuthTemplateProps> = ({ bannerSlot, formSlot, pageKey }) => {
   return (
-    <div className="relative min-h-screen w-full bg-[#060b0e] flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-hidden font-sans select-none">
+    <div className="relative min-h-screen w-full bg-dark-bg flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-hidden font-sans select-none">
       {/* Background Watermark Graphics (CodeConnect Logo Outlines) */}
       <div
         data-testid="watermark-top-left"
@@ -31,7 +31,7 @@ export const AuthTemplate: React.FC<AuthTemplateProps> = ({ bannerSlot, formSlot
       </div>
 
       {/* Main Central Card Container */}
-      <div className="relative z-10 w-full max-w-4xl bg-[#171d1f] rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border border-gray-800/60 backdrop-blur-sm transition-all duration-500">
+      <div className="relative z-10 w-full max-w-4xl bg-dark-card rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border border-gray-800/60 backdrop-blur-sm transition-all duration-500">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
           <div key={`banner-${pageKey || 'default'}`} className="w-full h-full flex items-center justify-center animate-auth-banner">
             {bannerSlot}

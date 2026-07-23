@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    --bg-dark: #060b0e;
-    --card-dark: #171d1f;
-    --input-dark: #384045;
-    --accent-green: #81fe88;
-    --accent-green-hover: #67e870;
-  }
+@theme {
+  --color-dark-bg: #060b0e;
+  --color-dark-card: #171d1f;
+  --color-dark-input: #384045;
+  --color-brand-green: #81fe88;
+  --color-brand-green-hover: #67e870;
+  --color-brand-green-active: #56f869;
+}
 
+@layer base {
   body {
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: var(--bg-dark);
+    background-color: var(--color-dark-bg);
     color: #ffffff;
     min-height: 100vh;
     overflow-x: hidden;

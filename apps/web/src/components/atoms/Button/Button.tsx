@@ -16,13 +16,13 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    'inline-flex items-center justify-center font-semibold rounded-lg px-6 py-3 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#81FE88] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer'
+    'inline-flex items-center justify-center font-semibold rounded-lg px-6 py-3 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-green disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer'
 
   const variantStyles = {
-    primary: 'bg-[#81FE88] text-black hover:bg-[#67E870] active:bg-[#56F869]',
-    secondary: 'bg-[#384045] text-white hover:bg-[#485258]',
+    primary: 'bg-brand-green text-black hover:bg-brand-green-hover active:bg-brand-green-active',
+    secondary: 'bg-dark-input text-white hover:bg-gray-700',
     outline: 'border border-gray-600 text-white hover:bg-white/10',
-    ghost: 'bg-transparent text-[#81FE88] hover:underline',
+    ghost: 'bg-transparent text-brand-green hover:underline',
   }
 
   const widthStyle = fullWidth ? 'w-full' : ''

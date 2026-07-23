@@ -12,7 +12,7 @@ export const AuthBanner: React.FC<AuthBannerProps> = ({
   className = '',
 }) => {
   return (
-    <div className={`relative w-full h-full min-h-[350px] md:min-h-[480px] rounded-xl overflow-hidden ${className}`}>
+    <div className={`relative w-full h-full min-h-80 md:min-h-120 rounded-xl overflow-hidden ${className}`}>
       <img
         src={imageSrc}
         alt={altText}

@@ -14,7 +14,7 @@ export const Link: React.FC<LinkProps> = ({
 }) => {
   const variantStyles = {
     default: 'text-xs text-gray-300 underline hover:text-white transition-all duration-200 hover:scale-105 inline-block',
-    accent: 'text-sm text-[#81FE88] font-bold hover:underline transition-all duration-300 hover:scale-105 hover:brightness-110 active:scale-95 inline-flex items-center gap-1 cursor-pointer',
+    accent: 'text-sm text-brand-green font-bold hover:underline transition-all duration-300 hover:scale-105 hover:brightness-110 active:scale-95 inline-flex items-center gap-1 cursor-pointer',
   }
 
   return (

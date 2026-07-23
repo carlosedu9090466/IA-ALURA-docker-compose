@@ -13,6 +13,6 @@ describe('Link Component', () => {
   it('applies accent variant styles', () => {
     render(<Link variant="accent">Crie seu cadastro!</Link>)
     const link = screen.getByRole('link')
-    expect(link.className).toContain('text-[#81FE88]')
+    expect(link.className).toContain('text-brand-green')
   })
 })
