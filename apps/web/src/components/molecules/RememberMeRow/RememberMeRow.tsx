@@ -6,12 +6,14 @@ export interface RememberMeRowProps {
   rememberMe: boolean
   onRememberMeChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   forgotPasswordHref?: string
+  showForgotPassword?: boolean
 }
 
 export const RememberMeRow: React.FC<RememberMeRowProps> = ({
   rememberMe,
   onRememberMeChange,
   forgotPasswordHref = '#',
+  showForgotPassword = true,
 }) => {
   return (
     <div className="flex items-center justify-between my-4 text-xs">
@@ -21,9 +23,11 @@ export const RememberMeRow: React.FC<RememberMeRowProps> = ({
         onChange={onRememberMeChange}
         label="Lembrar-me"
       />
-      <Link href={forgotPasswordHref} variant="default">
-        Esqueci a senha
-      </Link>
+      {showForgotPassword && (
+        <Link href={forgotPasswordHref} variant="default">
+          Esqueci a senha
+        </Link>
+      )}
     </div>
   )
 }

@@ -78,6 +78,7 @@ Esta opção não exige que você tenha o Node.js ou PNPM instalados na máquina
 | Rota | Descrição | Componente Principal |
 | :--- | :--- | :--- |
 | `/` | Página de Login | `LoginPage` (`src/pages/LoginPage/LoginPage.tsx`) |
+| `/cadastro` | Página de Cadastro | `RegisterPage` (`src/pages/RegisterPage/RegisterPage.tsx`) |
 
 ### Backend API (`apps/api` - Porta 3001)
 

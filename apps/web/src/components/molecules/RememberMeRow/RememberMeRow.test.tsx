@@ -21,4 +21,16 @@ describe('RememberMeRow Component', () => {
     fireEvent.click(screen.getByRole('checkbox'))
     expect(handleToggle).toHaveBeenCalledTimes(1)
   })
+
+  it('hides forgot password link when showForgotPassword is false', () => {
+    render(
+      <RememberMeRow
+        rememberMe={false}
+        onRememberMeChange={() => {}}
+        showForgotPassword={false}
+      />
+    )
+    expect(screen.getByText('Lembrar-me')).toBeInTheDocument()
+    expect(screen.queryByText('Esqueci a senha')).not.toBeInTheDocument()
+  })
 })

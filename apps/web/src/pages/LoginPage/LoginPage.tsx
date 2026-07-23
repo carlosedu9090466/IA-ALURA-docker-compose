@@ -3,7 +3,11 @@ import { AuthTemplate } from '../../components/templates/AuthTemplate/AuthTempla
 import { AuthBanner } from '../../components/organisms/AuthBanner/AuthBanner'
 import { LoginForm } from '../../components/organisms/LoginForm/LoginForm'
 
-export const LoginPage: React.FC = () => {
+export interface LoginPageProps {
+  onNavigateToRegister?: () => void
+}
+
+export const LoginPage: React.FC<LoginPageProps> = ({ onNavigateToRegister }) => {
   const handleLoginSubmit = (data: { identifier: string; pass: string; rememberMe: boolean }) => {
     console.log('Form submitted:', data)
   }
@@ -16,8 +20,16 @@ export const LoginPage: React.FC = () => {
     console.log('Google login clicked')
   }
 
+  const handleSignUpClick = (e: React.MouseEvent) => {
+    if (onNavigateToRegister) {
+      e.preventDefault()
+      onNavigateToRegister()
+    }
+  }
+
   return (
     <AuthTemplate
+      pageKey="login"
       bannerSlot={<AuthBanner imageSrc="/IMG_1 - Desktop.png" altText="Banner Code Connect" />}
       formSlot={
         <LoginForm
@@ -25,6 +37,11 @@ export const LoginPage: React.FC = () => {
           onGithubLogin={handleGithubLogin}
           onGoogleLogin={handleGoogleLogin}
           signUpHref="/cadastro"
+          onClick={(e: any) => {
+            if (e.target.closest('a')?.getAttribute('href') === '/cadastro') {
+              handleSignUpClick(e)
+            }
+          }}
           forgotPasswordHref="/recuperar-senha"
         />
       }
