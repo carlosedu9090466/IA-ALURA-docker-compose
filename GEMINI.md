@@ -105,7 +105,9 @@ Todos os comandos de execução e build podem ser rodados diretamente da **raiz 
   - `src/components/organisms/`: Seções complexas de interface (ex: formulário de cadastro, cabeçalho, tabela).
   - `src/components/templates/`: Estruturas de layout sem dados reais vinculados.
   - `src/pages/`: Páginas reais injetando dados nos templates e organismos.
-- **Estilização**: Uso exclusivo do **Tailwind CSS** para estilização utilitária e responsiva.
+- **Estilização & Paleta de Cores (Tailwind CSS)**: Uso exclusivo do **Tailwind CSS** para estilização utilitária e responsiva.
+  - **Paleta de Cores em `@theme`**: Toda nova cor do projeto DEVE ser configurada e estendida na diretiva `@theme` dentro de `src/index.css` (ex: `--color-brand-green: #81fe88`, `--color-dark-bg: #060b0e`). É PROIBIDO utilizar valores hexadecimais arbitrários diretamente em classes dos componentes (evitar `bg-[#81FE88]`, `text-[#060b0e]`, etc.).
+  - **Tamanhos e Espaçamentos**: Utilize sempre os **tokens de tamanho nativos do Tailwind** (`text-xs`, `text-sm`, `text-base`, `text-lg`, `text-2xl`, `text-3xl`, `min-h-80`, etc.) em vez de definir dimensões ou fontes arbitrárias em píxeis (evitar `text-[18px]`, `min-h-[350px]`, etc.).
 - **Testes Obrigatórios de Componentes**: Todo e qualquer componente criado (`.tsx`) **DEVE possuir obrigatoriamente** seu respectivo arquivo de teste (`*.test.tsx` ou `*.spec.tsx`) cobrindo seu uso e comportamento essencial (ex: renderização correta, manipulação de eventos de clique/digitação e estados principais).
 - **Configuração do Servidor**: O Vite deve manter `server: { host: true, port: 3000 }` no `vite.config.ts` para ser acessível nos containers Docker.
 
